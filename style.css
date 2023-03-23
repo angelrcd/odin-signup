@@ -12,6 +12,7 @@
 }
 html, body {
   height: 100%;
+  background-color: var(--bg-color);
 }
 body {
   line-height: 1.5;
@@ -47,6 +48,18 @@ p, h1, h2, h3, h4, h5, h6 {
   --bg-valid-input: #E2F0D2;
   --bg-invalid-input: #EBC6C7;
   --text-content-horizontal-padding: 3rem;
+}
+
+@media (prefers-color-scheme: dark){
+  :root {
+    --bg-color: #21252B;
+    --form-bg-color: #282C34;
+    --font-color: #cbcbcb;
+  }
+
+  ::placeholder {
+    color: var(--font-color);
+  }
 }
 
 body {
