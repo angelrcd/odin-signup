@@ -35,10 +35,10 @@ p, h1, h2, h3, h4, h5, h6 {
   --form-bg-color: #FFFFFF;
   --font-color: #2D2D2D;
   --border-input: #EAEBEE;
-  --border-invalid-input: #b9232640;
-  --border-valid-input: #8bc34a40;
+  --border-invalid-input: #c51e20;
+  --border-valid-input: green;
   --bg-valid-input: #E2F0D2;
-  --bg-valid-input: #EBC6C7;
+  --bg-invalid-input: #EBC6C7;
   --text-content-horizontal-padding: 3rem;
 }
 
@@ -143,10 +143,7 @@ body {
   padding: 0.2rem 1rem;
   border: 1px solid var(--border-input);
   border-radius: 3px;
-}
-
-.input-row input:focus {
-  background-color: white;
+  transition: all 0.5s ease-in-out;
 }
 
 button[type="submit"]{
@@ -170,7 +167,37 @@ a:link, a:visited {
   font-weight: 600;
   text-decoration: none;
 }
- 
+
+/* form validation */
+.input-row input:focus {
+  background-color: white;
+  outline: none;
+}
+
+.input-row input:placeholder-shown:not(:focus) {
+  background-color: var(--bg-color) !important;
+  border: 1px solid var(--border-input) !important;
+}
+
+.input-row input:invalid:focus{
+  border-color: var(--border-invalid-input);
+  background-color: white;
+}
+
+.input-row input:valid:focus{
+  border-color: var(--border-valid-input);
+  background-color: white;
+}
+
+.input-row input:invalid {
+  border-color: var(--border-invalid-input);
+  background: var(--bg-invalid-input);
+}
+
+.input-row input:valid {
+  border-color: var(--border-valid-input);
+  background: var(--bg-valid-input);
+}
 
 /* mobile */
 @media (max-width: 1000px) {

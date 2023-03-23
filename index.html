@@ -36,27 +36,35 @@
         <div class="inputs-container">
           <div class="input-row">
             <label for="first_name">FIRST NAME</label>
-            <input type="text" name="first_name" id="first_name" required>
+            <input type="text" name="first_name" id="first_name"
+            minlength="3" placeholder=" " required>
           </div>
           <div class="input-row">
             <label for="last_name">LAST NAME</label>
-            <input type="text" name="last_name" id="last_name" required>
+            <input type="text" name="last_name" id="last_name" 
+            minlength="3" placeholder=" " required>
           </div>
           <div class="input-row">
             <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" required
+            placeholder="email@domain"
+            >
           </div>
           <div class="input-row">
             <label for="phone">PHONE NUMBER</label>
-            <input type="tel" name="phone" id="phone" required>
+            <input type="tel" name="phone" id="phone" 
+            placeholder=" " required>
           </div>
           <div class="input-row">
             <label for="pswd">PASSWORD</label>
-            <input type="password" name="pswd" id="pswd" required>
+            <input type="password" name="pswd" id="pswd" required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+            placeholder=" ">
           </div>
           <div class="input-row">
             <label for="pswd-confirm">CONFIRM PASSWORD</label>
-            <input type="password" name="pswd-confirm" id="pswd-confirm" required>
+            <input type="password" name="pswd-confirm" id="pswd-confirm" 
+            placeholder=" " required>
           </div>
         </div>
         <div>
